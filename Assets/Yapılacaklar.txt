@@ -1,0 +1,111 @@
+{
+    Kamera:
+        Smooth Speed:
+            (DEFAULT: 1.5)
+            (PERFECT: 2.0)
+}
+
+MİXAMO {
+    Search: "jump kick"
+    Search: "pack"
+}
+
+{
+    Yapılacaklar :  --------Karakter, savaşırken ölür ve tekrar doğarsa; savaş modunda başlıyor. Yani düşmanla tekrar etkileşime girene kadar yumruk atabiliyor.
+                    --------İşin özü, trigger enter kısmı çalışıyor. Fakat trigger exit kısmı çalışmıyor.
+                    --------Düzeltme Çabaları 1:
+                    --------  Karakter savaşta düşmanı öldürürse, normale dönebiliyor. Ancak; savaşırken ölürse, bu durum geçersiz.
+                    ******** Düzeltildi
+                    .
+                    .
+                    --------Sıkıntı Çıkarabilecekler; Düşman öldüğünde trigger exit olmayacağı için karakter savaş modunda kalacak.
+                    ******** Düzeltildi
+                    .
+                    .
+                    --------Şu bloğa tırmanma kısmında hem yıldızı, hem de düşmanın trigger alanını algılayıp tırmanmaya çalışıyor. Eğer tırmanma kısımlarının tag'leri
+                    --------kendilerine özel olursa ve bunu climbing metoduna yansıtırsak sorunu çözeriz.
+                    .
+                    .
+                    --------Feature Scrit Dosyasına bir Ölüm Animasyonu Dahil Edilecek. Bu animasyon neredeyse bütün karakterlerde ortak olacak.
+                    --------Lütfen, ekledikten sonra WaitForSeconds() süresine bakmayı unutma. 
+                    ******** Düzeltildi
+                    .
+                    .
+                    --------Son olarak, şu tırmanmadan sonra bloğa çıkma meselesindeki, ışınlanma kısmını çözelim.
+                    --------//Işınlanma çözülemedi, ancak; daha rahat bir çıkış tasarlandı. Bu konudaki en iyi yapılan şey ise, karakter köşede kalınca yaşanan ikilemden
+                    --------kaynaklanan ışınlanmanın tekrarlanması çözüldü.
+                    .
+                    .
+                    --------Oyunda farklı yapıda düşmanlar olacak. Bunlar birincisi dengeli, ikincisi hızlı zayıf canı az, üçüncüsü yavaş kuvvetli ve canı fazla.
+                    .
+                    .
+                    --------Oyunda farklı zorluk seviyeleri olacak. Bunların arasındaki fark ise; düşmanların bulundukları aynı yerlere nasıl düşman geleceği değişecek. (dengeli, kuvvetli, zayıf)
+                    --------Karakterimizin canı ve vuruşu daha zor yükselecek, düşmanların vuruşu ve canı daha fazla olacak.
+                    --------Boss karakterlerin yüksek vuran skill kullanma olasılıkları arttırılacak.
+                    .
+                    .
+                    --------Kapıları açan yıldızın yerine anahtar sembolü koyulacak. Ve istenirse bu sembollerin ardındaki ışık farklı yanarak, bunların farklı kapıları açtığı anlaşılacak.
+                    --------Her kapı açılışında kamera direkt açılan kapıyı çekmeye gidecek.
+                    
+                    Road_Map : {
+                        MENUS : {
+                            Main Menu : {
+                                PLAY,
+                                In-App-Purchase,
+                                EXIT,
+
+                                Mini Button : {
+                                    SETTING,
+                                    CHARACTER,
+                                    INVENTORY,
+                                    SKILS,
+                                    Watch ADS Free Coin,
+                                }
+                            }
+                            Settting Menu : {
+                                Music Level,
+                                SFX Level,
+                                Difficulty Setting (EASY - NORMAL - HARD - EXTREME),
+                                Frame Per Second Settings (LOW:30 - DEFAULT:45 - HIGH:60),
+                            }
+                            In-App-Purchase Buy Menu : {
+                                M-Coin 1000,
+                                M-Coin 5000,
+                                M-Coin 10000,
+                                M-Coin 25000,
+                                M-Coin 50000,
+                                ADS FREE,
+
+                                Sniper (Mermi duvardan geçecek.),
+                                Axe (Ucundaki Elmas ile Axe Yere Vurulduğunda, Belli Bir Mesafe Düz Devam Edecek (Işın Gibi)),
+                            }
+                            Inventory System Menu : {
+                                Left Side : {
+                                    Komple Karakter,
+                                }
+                                Right Side : {
+                                    Giyilebilecek Eşyalar,
+                                }
+                                Not: Farklı Tarzda Olan Eşyaların Renkleri Birbirinden Farklı Olacak ve Sadece Eşyaya Tıkalanarak Giyilip Çıkarılabilecek.  
+                            }
+                            Character Status Menu & Character Skils Menu : {
+                                Left Side : {
+                                    Character Status Menu : {
+                                        HP,
+                                        SP,
+                                        Damage,
+                                        Defense,
+                                    }
+                                }
+                                Right Side : {
+                                    Character Skils Menu : {
+                                        Öfke,
+                                        Alansal Saldırı,
+                                        Görünen Herkese Saldırı,
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+}
