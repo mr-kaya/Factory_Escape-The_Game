@@ -34,7 +34,7 @@ public class EnemyMove : MonoBehaviour
             gameObject.transform.position = new Vector3(gameObject.transform.position.x, transform.position.y, 0);
         }
         
-        if(Mathf.Abs(transform.position.x - playerVector3.x) > 1.2F && gameObject.GetComponent<Features_Script>().health > 0 && !düşmanÖnündeDüşmanBool)
+        if(Mathf.Abs(transform.position.x - playerVector3.x) > 1.2F && gameObject.GetComponent<Features_Script>().health > 0)
         {
             gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(playerVector3.x, transform.position.y, 0),
                 2 * Time.deltaTime);
@@ -57,28 +57,6 @@ public class EnemyMove : MonoBehaviour
             {
                 animator.SetBool(FightBool, false);
             }
-        }
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("enemy") && other.contacts[0].normal.x > 0)
-        {
-            Debug.Log(other.gameObject.name+" : "+other.contacts[0].normal.x);
-            düşmanÖnündeDüşmanBool = true;
-        }
-    }
-
-    private void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.CompareTag("enemy"))
-        {
-            düşmanÖnündeDüşmanBool = false;
-        }
-
-        if (other.gameObject.CompareTag("Player"))
-        {
-            animator.SetBool(FightBool, false);
         }
     }
 }

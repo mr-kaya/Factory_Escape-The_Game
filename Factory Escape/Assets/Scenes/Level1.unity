@@ -749,7 +749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5637730344211523619, guid: 06f704cc7a2bd784b92dbd545aaee9de, type: 3}
       propertyPath: health
-      value: 75
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 5637730344211523619, guid: 06f704cc7a2bd784b92dbd545aaee9de, type: 3}
       propertyPath: playerControllerPanel
@@ -937,7 +937,7 @@ PrefabInstance:
       objectReference: {fileID: 499648862}
     - target: {fileID: 8880935125569823579, guid: 06f704cc7a2bd784b92dbd545aaee9de, type: 3}
       propertyPath: keyboardController
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8880935125569823579, guid: 06f704cc7a2bd784b92dbd545aaee9de, type: 3}
       propertyPath: fightButtonGameObject

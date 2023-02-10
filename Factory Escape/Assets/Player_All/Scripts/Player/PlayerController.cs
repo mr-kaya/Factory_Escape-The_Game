@@ -160,7 +160,7 @@ public class PlayerController : MonoBehaviour
             if(!_doubleJump) 
                 StartCoroutine(ResetJumpRoutine());
         }
-        else if(hitInfo.collider != null) {
+        else if(hitInfo.collider != null && hitInfo.collider.CompareTag("floor")) {
             if(resetJump == false || _doubleJump) {
                 _fakeGroundedPlayer = _realGroundedPlayer = true;
                 jumpAnimation = false; //Jump Animation
