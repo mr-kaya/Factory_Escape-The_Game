@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
     private int characterDamage = 0; 
     private int[] damageFightArray;
     private string[] fightNameArray;
+    private bool fightEnter;
 
     void Start() 
     {
@@ -77,13 +79,13 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Karakter Düzeltildi!");
             controller.enabled = true;
         }
-
-        if(gameObject.GetComponent<Features_Script>().health > 0) {    
-            Move();
-        }
-        else {
+        
+        if (gameObject.GetComponent<Features_Script>().health <= 0)
+        {
             Dead();
         }
+        
+        Move();
         Jump(false);
         Climb();
     }
@@ -169,10 +171,12 @@ public class PlayerController : MonoBehaviour
         //Jump Animation
         _playerAnimations.Jump(jumpAnimation);
         //Jump END
-
+        
         groundedPlayer = controller.isGrounded;
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+        
+        _playerAnimations.Fall(controller.isGrounded);
     }
 
     IEnumerator ResetJumpRoutine() {
@@ -214,25 +218,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public bool foreachKarar = false;
     public void Fight() {
         ///*Player - Enemy hareket ve Fight
-        
-        
-         
         reclessAnimationTimer = 0.0F;
         reclessAnimation = false;
+        animator.SetTrigger("Attack");
 
-        foreachKarar = false;
-
-        foreach (var item in fightNameArray)
-        {
-            if(animator.GetCurrentAnimatorStateInfo(0).IsName(item)) {
-                foreachKarar = true;
-            }
-        }
-
-        if(!foreachKarar && move.x == 0) {
+        /*if(!fightEnter && move.x == 0) {
             int randomAnimation = Random.Range(0, fightNameArray.Length);
             animator.Play(fightNameArray[randomAnimation], 0, 0.0f);
         
@@ -249,17 +241,36 @@ public class PlayerController : MonoBehaviour
             }
 
             StartCoroutine(ie_FightAnimation(hitClimbInfo, fightNameArray[randomAnimation], randomAnimation));
-        }
+        }*/
         ///*Player - Enemy hareket ve Fight
     }
 
+    bool IsAnimationFinished()
+    {
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        return stateInfo.normalizedTime >= 1f;
+    }
+
+    bool IsAnimationHalf()
+    {
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        return stateInfo.normalizedTime >= 0.6f;
+    }
+    
     IEnumerator ie_FightAnimation(RaycastHit hitEnemy, string fightName, int randomAnimation) {
-        yield return new WaitForSeconds(.5F);
-        //Debug.Log(hitEnemy.collider.tag); //Deneme, Raycast collider hangi objeye değiyor.
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName(fightName) && hitEnemy.collider != null && hitEnemy.collider.CompareTag("enemy_main")) {    
-            hitEnemy.collider.GetComponentInParent<Features_Script>().health -= characterDamage + damageFightArray[randomAnimation];
-            
-            Debug.Log("Damage : "+ (characterDamage+damageFightArray[randomAnimation]) ); 
+        yield return new WaitUntil(() => IsAnimationHalf());
+        if (hitEnemy.collider != null)
+        {
+            Debug.Log(hitEnemy.collider.tag); //Deneme, Raycast collider hangi objeye değiyor.
+            if(hitEnemy.collider.CompareTag("enemy_main"))
+            {
+                Features_Script enemyScript = hitEnemy.collider.GetComponentInParent<Features_Script>();
+                if (enemyScript != null)
+                {
+                    hitEnemy.collider.GetComponentInParent<Features_Script>().health -= characterDamage + damageFightArray[randomAnimation];
+                    fightEnter = false;   
+                }
+            }
         }
     }
 }

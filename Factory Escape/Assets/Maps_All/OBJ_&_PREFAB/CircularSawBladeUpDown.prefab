@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7849911267628377647
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.57
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      propertyPath: m_Name
+      value: CircularSawBladeUpDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547634330118583048, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      propertyPath: m_TagString
+      value: Tuzak
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 720610424431838901}
+    - targetCorrespondingSourceObject: {fileID: 4547634330118583048, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 728106040264045364}
+    - targetCorrespondingSourceObject: {fileID: 4547634330118583048, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5980837492424647363}
+    - targetCorrespondingSourceObject: {fileID: 4547634330118583048, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7379454608580272675}
+  m_SourcePrefab: {fileID: 100100000, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+--- !u!1 &6047223660715283751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4547634330118583048, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+  m_PrefabInstance: {fileID: 7849911267628377647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &728106040264045364
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6047223660715283751}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.12
+  m_Height: 4
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5980837492424647363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6047223660715283751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c2368c25e0e22941a0c8119958be8e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7379454608580272675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6047223660715283751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edbdc15fe1c5b0a4688f20dca4d2df0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  damage: 100
+  playerControllerPanel: {fileID: 0}
+  damageFightArray: 0a0000000f0000001900000028000000320000004b0000005a0000006e0000007800000096000000dc00000090010000
+  fightNameArray:
+  - FightComboPunch
+  - FightSinglePunch
+  - kickVer2
+  - kickVer1
+  enemyCollisionCollider: {fileID: 0}
+  enemyTriggerCollisionCollider: {fileID: 0}
+--- !u!1 &6931344824857418622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a82ab136b56b96a4cb4fa0d112fda7d7, type: 3}
+  m_PrefabInstance: {fileID: 7849911267628377647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &720610424431838901
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6931344824857418622}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3260768db2076744bb2b56800631bcfc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

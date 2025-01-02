@@ -19,13 +19,18 @@ public class Features_Script : MonoBehaviour
     
     [Header("Only Enemy")]
     public BoxCollider enemyCollisionCollider;
+    public BoxCollider enemyTriggerCollisionCollider;
     
     private Animator animator;
     private bool singlePlayAnimation;
 
     void Start() {
         animator = gameObject.GetComponentInChildren<Animator>();
-    
+        if (gameObject.GetComponent<EnemyMove>() != null)
+        {
+            
+        }
+        
         singlePlayAnimation = true;
     }
 
@@ -39,9 +44,10 @@ public class Features_Script : MonoBehaviour
                     if(singlePlayAnimation) {
                         singlePlayAnimation = false;
 
-
+                        enemyTriggerCollisionCollider.enabled = false;
                         enemyCollisionCollider.enabled = false;
 
+                        
                         animator.Play("Death", 0, 0.0F);
                         animator.speed = 1.5F;
                     }

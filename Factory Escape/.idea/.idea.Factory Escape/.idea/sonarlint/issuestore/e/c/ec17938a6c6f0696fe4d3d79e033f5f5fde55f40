@@ -1,0 +1,12 @@
+
+scsharpsquid:S1125¦"*Remove the unnecessary Boolean literal(s).(÷÷üïÿÿÿÿÿJ$8f733676-d474-4b30-9291-724f58fccdce
+›csharpsquid:S3776‰"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ŒõôıÿÿÿÿJ$f97efbd7-ed1f-422e-a87a-55a11fdfdeb9
+‡csharpsquid:S1854 ">Remove this useless assignment to local variable 'MobileJump'.(’±…ûûÿÿÿÿJ$08091d7d-b123-4598-b1f8-83bc212b1112
+wcsharpsquid:S3903"/Move 'PlayerController' into a named namespace.(â „¦øÿÿÿÿJ$35c7f016-d71e-4347-9eff-54a22cb0e8b9
+csharpsquid:S1244|"LDo not check floating point equality with exact values, use a range instead.(ÃšÉJ$1a81d26f-74d7-45b1-bbd6-a3327a8a642f
+œcsharpsquid:S1244ì"LDo not check floating point equality with exact values, use a range instead.(¾Õ ºøÿÿÿÿ8ùğ¨à²2J$74f82d24-5dcb-4ea4-baef-fcf56d4f781d
+gcsharpsquid:S2933"Make 'gravityValue' 'readonly'.(ÖÖ‘şÿÿÿÿJ$df6e6692-b205-4dc3-aaf5-3c9ca268c783
+xcsharpsquid:S1066¦"/Merge this if statement with the enclosing one.(÷÷üïÿÿÿÿÿJ$356459d9-1a4f-4612-97dc-a50cf1541177
+{csharpsquid:S1172"0Remove this unused method parameter 'fightName'.(Ğ§­ı8ÀÑŒè²2J$49796160-e4d2-41dc-b152-fc2c1e22b2df
+acsharpsquid:S125A"Remove this commented out code.(Ñ­Ò‡J$9ef96a71-9797-4195-ab1b-b4ade5483b84
+acsharpsquid:S125k"Remove this commented out code.(úíÉJ$996c0a69-b70d-4e62-a3f5-a94426e330bb
