@@ -167,6 +167,7 @@ public class PlayerController : MonoBehaviour
                 _fakeGroundedPlayer = _realGroundedPlayer = true;
                 jumpAnimation = false; //Jump Animation
             }
+            
         }
         //Jump Animation
         _playerAnimations.Jump(jumpAnimation);

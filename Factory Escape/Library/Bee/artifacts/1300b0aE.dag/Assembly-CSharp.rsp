@@ -410,6 +410,7 @@
 -analyzer:"/home/kaya099/Unity/Hub/Editor/6000.0.32f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Enemy_All/Scripts/EnemyMove.cs"
 "Assets/Enemy_All/Scripts/Tuzak_Enemy/TuzakCollider.cs"
+"Assets/Maps_All/Script/Door_Star_Open.cs"
 "Assets/Menu_All/Script/MainMenuScr.cs"
 "Assets/Other_Assets/Joystick Pack/Scripts/Base/Joystick.cs"
 "Assets/Other_Assets/Joystick Pack/Scripts/Joysticks/DynamicJoystick.cs"
