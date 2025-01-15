@@ -6,8 +6,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638715830430000000
-    m_Hash: 2192574189
+      ticks: 638725660950000000
+    m_Hash: 3088747892
   m_LockFileStatus:
     m_FilePath: /home/kaya099/Documents/Unity Projects/Factory_Escape-The_Game/Factory
       Escape/Packages/packages-lock.json
@@ -15,8 +15,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638715830430000000
-    m_Hash: 951277922
+      ticks: 638725660950000000
+    m_Hash: 3085965308
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -134,126 +134,45 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.5
     minimumUnityVersion: 2023.2.0a18
-- packageId: com.unity.collab-proxy@2.6.0
+- packageId: com.unity.editorcoroutines@1.0.0
   testable: 0
   isDirectDependency: 1
-  version: 2.6.0
+  version: 1.0.0
   source: 1
   resolvedPath: /home/kaya099/Documents/Unity Projects/Factory_Escape-The_Game/Factory
-    Escape/Library/PackageCache/com.unity.collab-proxy
-  assetPath: Packages/com.unity.collab-proxy
-  name: com.unity.collab-proxy
-  displayName: Version Control
+    Escape/Library/PackageCache/com.unity.editorcoroutines
+  assetPath: Packages/com.unity.editorcoroutines
+  name: com.unity.editorcoroutines
+  displayName: Editor Coroutines
   author:
     name: 
     email: 
     url: 
-  category: Editor
-  type: 
-  description: The package gives you the ability to use Unity Version Control in
-    the Unity editor. To use Unity Version Control, a subscription is required. Learn
-    more about how you can get started for free by visiting https://unity.com/solutions/version-control
+  category: 
+  type: asset
+  description: 'The editor coroutines package allows developers to start constructs
+    similar to Unity''s monobehaviour based coroutines within the editor using abitrary
+    objects. '
   errors: []
   versions:
     all:
-    - 1.2.3-preview
-    - 1.2.4-preview
-    - 1.2.6
-    - 1.2.7
-    - 1.2.9
-    - 1.2.11
-    - 1.2.15
-    - 1.2.16
-    - 1.2.17-preview.3
-    - 1.3.2
-    - 1.3.3
-    - 1.3.4
-    - 1.3.5
-    - 1.3.6
-    - 1.3.7
-    - 1.3.8
-    - 1.3.9
-    - 1.4.9
-    - 1.5.7
-    - 1.6.0
-    - 1.7.1
-    - 1.8.0
-    - 1.9.0
-    - 1.10.2
-    - 1.11.2
-    - 1.12.5
-    - 1.13.5
-    - 1.14.1
-    - 1.14.4
-    - 1.14.7
-    - 1.14.9
-    - 1.14.12
-    - 1.14.13
-    - 1.14.15
-    - 1.14.16
-    - 1.14.17
-    - 1.14.18
-    - 1.15.1
-    - 1.15.4
-    - 1.15.7
-    - 1.15.9
-    - 1.15.12
-    - 1.15.13
-    - 1.15.15
-    - 1.15.16
-    - 1.15.17
-    - 1.15.18
-    - 1.17.0
-    - 1.17.1
-    - 1.17.2
-    - 1.17.6
-    - 1.17.7
-    - 2.0.0-preview.6
-    - 2.0.0-preview.8
-    - 2.0.0-preview.15
-    - 2.0.0-preview.17
-    - 2.0.0-preview.20
-    - 2.0.0-preview.21
-    - 2.0.0-preview.22
-    - 2.0.0
-    - 2.0.1
-    - 2.0.3
-    - 2.0.4
-    - 2.0.5
-    - 2.0.7
-    - 2.1.0-preview.3
-    - 2.1.0-preview.5
-    - 2.1.0-preview.6
-    - 2.1.0
-    - 2.2.0
-    - 2.3.1
-    - 2.4.3
-    - 2.4.4
-    - 2.5.1
-    - 2.5.2
-    - 2.6.0
+    - 0.0.1-preview.3
+    - 0.0.1-preview.4
+    - 0.0.1-preview.5
+    - 0.0.2-preview.1
+    - 0.1.0-preview.1
+    - 0.1.0-preview.2
+    - 1.0.0
     compatible:
-    - 2.6.0
-    recommended: 2.6.0
+    - 1.0.0
+    recommended: 1.0.0
     deprecated: []
   dependencies: []
   resolvedDependencies: []
   keywords:
-  - backup
-  - cloud
-  - collab
-  - collaborate
-  - collaboration
-  - control
-  - devops
-  - plastic
-  - plasticscm
-  - source
-  - team
-  - teams
-  - version
-  - vcs
-  - uvcs
+  - coroutine
+  - coroutines
+  - editor
   registry:
     id: main
     name: 
@@ -266,16 +185,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638684801569990000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.collab-proxy@2.6/manual/index.html
+  datePublishedTicks: 637232611380000000
+  documentationUrl: 
   hasRepository: 1
   repository:
     type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-    revision: b7effc6b40a40af218ae30084906471699330ac9
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.editorcoroutines.git
+    revision: f67fc9992bbc7a553b17375de53a8b2db136528e
     path: 
   unityLifecycle:
-    version: 2.6.0
+    version: 1.0.0
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -285,106 +204,91 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: "{\"changelog\":\"### Added\\n\\n- Added the ability to merge a branch
-    or a changeset, using a new context menu actions\\n- Added file conflict & dir
-    conflict context menu actions to the merge view\\n- Added diff and merge settings
-    in Project Settings -> Version Control -> Unity Version Control Settings\\n-
-    Added merge options dialog to the merge view\\n- Added copy path & history context
-    menu actions in all menus where they apply\\n- Added an menu entry to 'Open in
-    Unity Cloud' showing the repository in the Unity Dashboard\\n\\n### Changed\\n\\n-
-    Updated the minimum supported version to Unity 2021.3.0f1\\n- Removed support
-    for migrating old Collaborate workspaces to Unity Version Control\\n- Hide from
-    the public documentation all internal APIs that were previously visible by mistake\\n-
-    Optimized switching operations to only triggers the Package Manager to reinstall
-    packages when needed\\n- Optimized incoming changes to only reload the Package
-    Manager when needed (Gluon/partial workspace only for now)\\n- Automatically
-    add UnityDirMonSyncFile rule for existing ignore.conf to avoid triggering unnecessary
-    finding changes operation\\n- Improved the \u201Csearch\u201D edit box so it
-    can resize when there is not enough space in the toolbar\\n- Replaced the \\\"D\\\"
-    DevOps icon by the branching icon used in the Hub\\n- Replaced the logo of Unity
-    in the Sign in to Unity VCS window\\n\\n### Fixed\\n\\n- Fixed files getting
-    checked out even though they are in hidden_changes.conf\\n- Fixed manual login
-    to Cloud that didn't work with an Enterprise installation\\n- Fixed resolve conflicts
-    not informing about lack of UVCS installation\\n- Fixed the Invite users to cloud
-    organization when using an Enterprise installation\\n- Fixed new child branch
-    not created from HEAD after update\\n- Fixed the learn more (here) link that
-    showed the hex color value in Unity 6\\n- Fixed link to invite members in Unity
-    Cloud.\\n- Fixed a crash in the create workspace window when unable to resolve
-    a @unity organization\\n- Fixed incoming changes view that was not kept as selected
-    after resolving some conflicts\\n- Fixed workspace name that was not refreshed
-    after repository manual creation or selection\\n- Added a warning message to
-    inform users about mismatching cloud project.\\n- Removed from the Create Workspace
-    window the Local server that was present with no installation of UVCS\\n- Replaced
-    hardcoded urls pointing to plasticscm.com\"}"
+  upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 001b54a8988a14785c8e209d6c788bb15f9e58cf
+  fingerprint: 7d48783e7b8cfcee5f8ef9ba787ed0d9dad4ebca
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 2.6.0
-    minimumUnityVersion: 2021.3.0f1
-- packageId: com.unity.feature.development@1.0.2
+    minimumPackageVersion: 1.0.0
+    minimumUnityVersion: 2018.1.0a1
+- packageId: com.unity.ide.rider@3.0.34
   testable: 0
   isDirectDependency: 1
-  version: 1.0.2
-  source: 2
+  version: 3.0.34
+  source: 1
   resolvedPath: /home/kaya099/Documents/Unity Projects/Factory_Escape-The_Game/Factory
-    Escape/Library/PackageCache/com.unity.feature.development
-  assetPath: Packages/com.unity.feature.development
-  name: com.unity.feature.development
-  displayName: Engineering
+    Escape/Library/PackageCache/com.unity.ide.rider
+  assetPath: Packages/com.unity.ide.rider
+  name: com.unity.ide.rider
+  displayName: JetBrains Rider Editor
   author:
     name: 
     email: 
     url: 
   category: 
-  type: feature
-  description: "Optimize your development experience in Unity with the Dev Tools
-    feature set. Enable support for multiple integrated development environments
-    (IDE) for editing your Unity code. Get access to development tools to help you
-    test and analyze your project\u2019s performance."
+  type: 
+  description: The JetBrains Rider Editor package provides an integration for using
+    the JetBrains Rider IDE as a code editor for Unity. It adds support for generating
+    .csproj files for code completion and auto-discovery of installations.
   errors: []
   versions:
     all:
     - 1.0.2
+    - 1.0.6
+    - 1.0.8
+    - 1.1.0
+    - 1.1.1
+    - 1.1.2-preview
+    - 1.1.2-preview.2
+    - 1.1.3-preview.1
+    - 1.1.4-preview
+    - 1.1.4
+    - 1.2.0-preview
+    - 1.2.1
+    - 2.0.0-preview
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+    - 2.0.5
+    - 2.0.7
+    - 3.0.1
+    - 3.0.2
+    - 3.0.3
+    - 3.0.4
+    - 3.0.5
+    - 3.0.6
+    - 3.0.7
+    - 3.0.9
+    - 3.0.10
+    - 3.0.12
+    - 3.0.13
+    - 3.0.14
+    - 3.0.15
+    - 3.0.16
+    - 3.0.17
+    - 3.0.18
+    - 3.0.20
+    - 3.0.21
+    - 3.0.22
+    - 3.0.24
+    - 3.0.25
+    - 3.0.26
+    - 3.0.27
+    - 3.0.28
+    - 3.0.31
+    - 3.0.34
     compatible:
-    - 1.0.2
-    recommended: 1.0.2
+    - 3.0.31
+    - 3.0.34
+    recommended: 3.0.34
     deprecated: []
   dependencies:
-  - name: com.unity.ide.visualstudio
-    version: default
-  - name: com.unity.ide.rider
-    version: default
-  - name: com.unity.editorcoroutines
-    version: default
-  - name: com.unity.performance.profile-analyzer
-    version: default
-  - name: com.unity.test-framework
-    version: default
-  - name: com.unity.testtools.codecoverage
-    version: default
+  - name: com.unity.ext.nunit
+    version: 1.0.6
   resolvedDependencies:
-  - name: com.unity.ide.visualstudio
-    version: 2.0.22
-  - name: com.unity.test-framework
-    version: 1.4.5
   - name: com.unity.ext.nunit
     version: 2.0.5
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.ide.rider
-    version: 3.0.31
-  - name: com.unity.editorcoroutines
-    version: 1.0.0
-  - name: com.unity.performance.profile-analyzer
-    version: 1.2.2
-  - name: com.unity.testtools.codecoverage
-    version: 1.2.6
-  - name: com.unity.settings-manager
-    version: 2.0.1
   keywords: []
   registry:
     id: main
@@ -396,18 +300,18 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   entitlements:
-    licensingModel: 0
+    licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
+  datePublishedTicks: 638651995659960000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.rider@3.0/manual/index.html
+  hasRepository: 1
   repository:
-    type: 
-    url: 
-    revision: 
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
+    revision: 700eb86ebc7b9f72d760e2e1c740fc5e2fd6a54b
     path: 
   unityLifecycle:
-    version: 1.0.2
+    version: 3.0.31
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -417,14 +321,14 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"quickstart":"https://docs.unity3d.com/Documentation/Manual/DeveloperToolsFeature.html"}'
+  upmReserved: '{"changelog":"- Bump Unity minimum supported version"}'
   assetStore:
     productId: 
-  fingerprint: 767aadbc6eb72681a4ca807c8fa248e0230a0cef
+  fingerprint: ecbf706690e5ce42dc165ddd8e5754acda3dc6b9
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 1.0.2
-    minimumUnityVersion: 
+    minimumPackageVersion: 3.0.31
+    minimumUnityVersion: 2019.4.6f1
 - packageId: com.unity.ide.visualstudio@2.0.22
   testable: 0
   isDirectDependency: 1
@@ -623,6 +527,93 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
     minimumUnityVersion: 6000.0.0a1
+- packageId: com.unity.performance.profile-analyzer@1.2.3
+  testable: 0
+  isDirectDependency: 1
+  version: 1.2.3
+  source: 1
+  resolvedPath: /home/kaya099/Documents/Unity Projects/Factory_Escape-The_Game/Factory
+    Escape/Library/PackageCache/com.unity.performance.profile-analyzer
+  assetPath: Packages/com.unity.performance.profile-analyzer
+  name: com.unity.performance.profile-analyzer
+  displayName: Profile Analyzer
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: "The Profile Analyzer tool supports the standard Unity Profiler. You
+    can use it to analyze multiple frames and multiple data sets of the CPU data
+    in the Profiler.\n\nMain features: \n\u25AA Multi-frame analysis of a single
+    set of Profiler CPU data \n\u25AA Comparison of two multi-frame profile scans
+    \n\n"
+  errors: []
+  versions:
+    all:
+    - 0.4.0-preview.3
+    - 0.4.0-preview.5
+    - 0.4.0-preview.6
+    - 0.5.0-preview.1
+    - 0.6.0-preview.1
+    - 0.7.0-preview.4
+    - 1.0.0
+    - 1.0.1
+    - 1.0.2
+    - 1.0.3
+    - 1.1.0-pre.2
+    - 1.1.0
+    - 1.1.1
+    - 1.2.2
+    - 1.2.3
+    compatible:
+    - 1.2.2
+    - 1.2.3
+    recommended: 1.2.3
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638699545898200000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.performance.profile-analyzer@1.2/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.performance.profile-analyzer.git
+    revision: 835e61d94bd201d0dea5763dff75e86b6b61de29
+    path: 
+  unityLifecycle:
+    version: 1.2.2
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"### Fixed\n\n* Fixed minimum supported version in documentation.\n*
+    Fixed PROFB-199; Unchecking ''Hide Removed Markers'' doesn''t work."}'
+  assetStore:
+    productId: 
+  fingerprint: a68e7bc849973d943853204178d08a2bc7656ffe
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 1.2.2
+    minimumUnityVersion: 2020.3.0a1
 - packageId: com.unity.test-framework@1.4.5
   testable: 0
   isDirectDependency: 1
@@ -3998,488 +3989,4 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.5
     minimumUnityVersion: 2019.4.0a1
-- packageId: com.unity.ide.rider@3.0.31
-  testable: 0
-  isDirectDependency: 0
-  version: 3.0.31
-  source: 1
-  resolvedPath: /home/kaya099/Documents/Unity Projects/Factory_Escape-The_Game/Factory
-    Escape/Library/PackageCache/com.unity.ide.rider
-  assetPath: Packages/com.unity.ide.rider
-  name: com.unity.ide.rider
-  displayName: JetBrains Rider Editor
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: assets
-  description: The JetBrains Rider Editor package provides an integration for using
-    the JetBrains Rider IDE as a code editor for Unity. It adds support for generating
-    .csproj files for code completion and auto-discovery of installations.
-  errors: []
-  versions:
-    all:
-    - 1.0.2
-    - 1.0.6
-    - 1.0.8
-    - 1.1.0
-    - 1.1.1
-    - 1.1.2-preview
-    - 1.1.2-preview.2
-    - 1.1.3-preview.1
-    - 1.1.4-preview
-    - 1.1.4
-    - 1.2.0-preview
-    - 1.2.1
-    - 2.0.0-preview
-    - 2.0.1
-    - 2.0.2
-    - 2.0.3
-    - 2.0.5
-    - 2.0.7
-    - 3.0.1
-    - 3.0.2
-    - 3.0.3
-    - 3.0.4
-    - 3.0.5
-    - 3.0.6
-    - 3.0.7
-    - 3.0.9
-    - 3.0.10
-    - 3.0.12
-    - 3.0.13
-    - 3.0.14
-    - 3.0.15
-    - 3.0.16
-    - 3.0.17
-    - 3.0.18
-    - 3.0.20
-    - 3.0.21
-    - 3.0.22
-    - 3.0.24
-    - 3.0.25
-    - 3.0.26
-    - 3.0.27
-    - 3.0.28
-    - 3.0.31
-    - 3.0.34
-    compatible:
-    - 3.0.31
-    - 3.0.34
-    recommended: 3.0.34
-    deprecated: []
-  dependencies:
-  - name: com.unity.ext.nunit
-    version: 1.0.6
-  resolvedDependencies:
-  - name: com.unity.ext.nunit
-    version: 2.0.5
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638548308080000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.rider@3.0/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-    revision: ccd778a2275ff09f1a83bc924cfb2fb4d5b63566
-    path: 
-  unityLifecycle:
-    version: 3.0.31
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"fix RIDER-104519 Rider is reporting errors in scripts
-    that work fine in Unity when utilizing DOTS - when Player project, by generating
-    projects for all assemblies in \"com.unity.entities\", \"com.unity.collections\"\nfix
-    RIDER-111622 Unity Rider package is not compatible with Rider Dev builds"}'
-  assetStore:
-    productId: 
-  fingerprint: 7921be93db40ec070fcb01ed82d1c3df1bbdddcd
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 3.0.31
-    minimumUnityVersion: 2019.2.6f1
-- packageId: com.unity.editorcoroutines@1.0.0
-  testable: 0
-  isDirectDependency: 0
-  version: 1.0.0
-  source: 1
-  resolvedPath: /home/kaya099/Documents/Unity Projects/Factory_Escape-The_Game/Factory
-    Escape/Library/PackageCache/com.unity.editorcoroutines
-  assetPath: Packages/com.unity.editorcoroutines
-  name: com.unity.editorcoroutines
-  displayName: Editor Coroutines
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: asset
-  description: 'The editor coroutines package allows developers to start constructs
-    similar to Unity''s monobehaviour based coroutines within the editor using abitrary
-    objects. '
-  errors: []
-  versions:
-    all:
-    - 0.0.1-preview.3
-    - 0.0.1-preview.4
-    - 0.0.1-preview.5
-    - 0.0.2-preview.1
-    - 0.1.0-preview.1
-    - 0.1.0-preview.2
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    recommended: 1.0.0
-    deprecated: []
-  dependencies: []
-  resolvedDependencies: []
-  keywords:
-  - coroutine
-  - coroutines
-  - editor
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637232611380000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.editorcoroutines.git
-    revision: f67fc9992bbc7a553b17375de53a8b2db136528e
-    path: 
-  unityLifecycle:
-    version: 1.0.0
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-  fingerprint: 7d48783e7b8cfcee5f8ef9ba787ed0d9dad4ebca
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.0.0
-    minimumUnityVersion: 2018.1.0a1
-- packageId: com.unity.performance.profile-analyzer@1.2.2
-  testable: 0
-  isDirectDependency: 0
-  version: 1.2.2
-  source: 1
-  resolvedPath: /home/kaya099/Documents/Unity Projects/Factory_Escape-The_Game/Factory
-    Escape/Library/PackageCache/com.unity.performance.profile-analyzer
-  assetPath: Packages/com.unity.performance.profile-analyzer
-  name: com.unity.performance.profile-analyzer
-  displayName: Profile Analyzer
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: asset
-  description: "The Profile Analyzer tool supports the standard Unity Profiler. You
-    can use it to analyze multiple frames and multiple data sets of the CPU data
-    in the Profiler.\n\nMain features: \n\u25AA Multi-frame analysis of a single
-    set of Profiler CPU data \n\u25AA Comparison of two multi-frame profile scans
-    \n\n"
-  errors: []
-  versions:
-    all:
-    - 0.4.0-preview.3
-    - 0.4.0-preview.5
-    - 0.4.0-preview.6
-    - 0.5.0-preview.1
-    - 0.6.0-preview.1
-    - 0.7.0-preview.4
-    - 1.0.0
-    - 1.0.1
-    - 1.0.2
-    - 1.0.3
-    - 1.1.0-pre.2
-    - 1.1.0
-    - 1.1.1
-    - 1.2.2
-    - 1.2.3
-    compatible:
-    - 1.2.2
-    - 1.2.3
-    recommended: 1.2.3
-    deprecated: []
-  dependencies: []
-  resolvedDependencies: []
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638108624620000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.performance.profile-analyzer@1.2/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.performance.profile-analyzer.git
-    revision: 2c63f931588caa60a1fef33b1b250b20d952dc58
-    path: 
-  unityLifecycle:
-    version: 1.2.2
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"### Fixed\n\n* Fixed exception thrown when removing
-    marker."}'
-  assetStore:
-    productId: 
-  fingerprint: fe7acfd2717a98ded6ddc33be6b2ebe4459a2add
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.2.2
-    minimumUnityVersion: 2020.3.0a1
-- packageId: com.unity.testtools.codecoverage@1.2.6
-  testable: 0
-  isDirectDependency: 0
-  version: 1.2.6
-  source: 1
-  resolvedPath: /home/kaya099/Documents/Unity Projects/Factory_Escape-The_Game/Factory
-    Escape/Library/PackageCache/com.unity.testtools.codecoverage
-  assetPath: Packages/com.unity.testtools.codecoverage
-  name: com.unity.testtools.codecoverage
-  displayName: Code Coverage
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: assets
-  description: Use this package to export code coverage data and reports from your
-    automated tests. Additionally, the Code Coverage package offers a Coverage Recording
-    feature which allows capturing coverage data on demand, for manual testing or
-    when there are no automated tests in the project.
-  errors: []
-  versions:
-    all:
-    - 0.2.0-preview
-    - 0.2.1-preview
-    - 0.2.2-preview
-    - 0.2.3-preview
-    - 0.3.0-preview
-    - 0.3.1-preview
-    - 0.4.0-preview
-    - 0.4.1-preview
-    - 0.4.2-preview
-    - 0.4.3-preview
-    - 1.0.0-pre.1
-    - 1.0.0-pre.2
-    - 1.0.0-pre.3
-    - 1.0.0-pre.4
-    - 1.0.0
-    - 1.0.1
-    - 1.1.0
-    - 1.1.1
-    - 1.2.0-exp.1
-    - 1.2.0-exp.2
-    - 1.2.0-exp.3
-    - 1.2.0-exp.4
-    - 1.2.0-exp.5
-    - 1.2.0-exp.6
-    - 1.2.0-exp.7
-    - 1.2.0
-    - 1.2.1
-    - 1.2.2
-    - 1.2.3
-    - 1.2.4
-    - 1.2.5
-    - 1.2.6
-    compatible:
-    - 1.2.6
-    recommended: 1.2.6
-    deprecated: []
-  dependencies:
-  - name: com.unity.test-framework
-    version: 1.0.16
-  - name: com.unity.settings-manager
-    version: 1.0.1
-  resolvedDependencies:
-  - name: com.unity.test-framework
-    version: 1.4.5
-  - name: com.unity.ext.nunit
-    version: 2.0.5
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.settings-manager
-    version: 2.0.1
-  keywords:
-  - test
-  - coverage
-  - testing
-  - opencover
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638575857900000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.testtools.codecoverage.git
-    revision: 959db8ff97eedf9b211ad5cf320b87ac01f1e90f
-    path: 
-  unityLifecycle:
-    version: 1.2.6
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"### Fixes\n- Documentation: Fixed formatting in [Using
-    Code Coverage in batchmode](https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html)
-    page (case [COV-40](https://issuetracker.unity3d.com/issues/docs-formatting-in-using-code-coverage-in-batchmode-docs-page-is-incorrect)).\n-
-    Removed the references to the deprecated FindObjectOfType method in the *Asteroids
-    sample project* (case [COV-42](https://issuetracker.unity3d.com/issues/sample-project-is-using-obsolete-findobjectoftype-method-which-causes-multiple-warnings-in-console-when-it-is-imported)).\n-
-    Added missing logs for the ReportGenerator (case [COV-46](https://issuetracker.unity3d.com/issues/code-coverage-package-does-not-report-some-of-the-internal-reportgenerator-errors))."}'
-  assetStore:
-    productId: 
-  fingerprint: 205a02cbcb39584f20b51c49b853047aceb3a3a7
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.2.6
-    minimumUnityVersion: 2019.3.0a1
-- packageId: com.unity.settings-manager@2.0.1
-  testable: 0
-  isDirectDependency: 0
-  version: 2.0.1
-  source: 1
-  resolvedPath: /home/kaya099/Documents/Unity Projects/Factory_Escape-The_Game/Factory
-    Escape/Library/PackageCache/com.unity.settings-manager
-  assetPath: Packages/com.unity.settings-manager
-  name: com.unity.settings-manager
-  displayName: Settings Manager
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: asset
-  description: A framework for making any serializable field a setting, complete
-    with a pre-built settings interface.
-  errors: []
-  versions:
-    all:
-    - 0.1.0-preview.4
-    - 0.1.0-preview.8
-    - 1.0.0
-    - 1.0.1
-    - 1.0.2
-    - 1.0.3
-    - 2.0.0
-    - 2.0.1
-    compatible:
-    - 2.0.1
-    recommended: 2.0.1
-    deprecated: []
-  dependencies: []
-  resolvedDependencies: []
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637744099390000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.com/Unity-Technologies/com.unity.settings-manager.git
-    revision: 9b7c12d04ef880168151c127fd6b37b5931197dc
-    path: 
-  unityLifecycle:
-    version: 2.0.1
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-  fingerprint: 56a930affa1e4462d3595b5c19a1c2a4bf2015d2
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 2.0.1
-    minimumUnityVersion: 2018.4.0a1
 m_BuiltInPackagesHash: 1ab794538eae32cf83c111fc8b3ab5b563017ccc

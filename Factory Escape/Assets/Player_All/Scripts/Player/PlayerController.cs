@@ -33,13 +33,15 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public GameObject animationGameObject;
     private PlayerAnimations _playerAnimations;
-    private bool jumpAnimation = false;
+    private bool jumpingAnimation = false;
+    private bool landingAnimation = false;
+    private bool fallingAnimation = false;
     private bool reclessAnimation = false;
     private float reclessAnimationTimer = 0.0f;
     
-    private bool hitInfoBool = false;
-    private bool hitInfoExitBool = false;
-    private RaycastHit hitInfo;
+    private bool hitClimbInfoBool = false;
+    private bool hitClimbInfoExitBool = false;
+    private RaycastHit hitJumpInfo;
     private RaycastHit hitClimbInfo;
     private RaycastHit hitClimbInfoExit;
     private bool climbingSystemCore = false;
@@ -48,7 +50,7 @@ public class PlayerController : MonoBehaviour
     private int characterDamage = 0; 
     private int[] damageFightArray;
     private string[] fightNameArray;
-    private bool fightEnter;
+    //private bool fightEnter;
 
     void Start() 
     {
@@ -73,6 +75,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Raycast System
+        Physics.Raycast(transform.position, Vector3.down, out hitJumpInfo, 2F);
+        Physics.Raycast(new Vector3(transform.position.x, transform.position.y-0.35f, transform.position.z), transform.forward, out hitClimbInfo, 0.5F);
+        Physics.Raycast(new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z), transform.forward, out hitClimbInfoExit, 0.5f);
+        
         if(Mathf.Abs(gameObject.transform.position.z) > 0.33F) {
             controller.enabled = false;
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
@@ -140,16 +147,27 @@ public class PlayerController : MonoBehaviour
         }
     
         //Jump BEGİN
-        Physics.Raycast(transform.position, Vector3.down, out hitInfo, 1.4F);
+        if (hitJumpInfo.collider != null)
+            _fakeGroundedPlayer = true;
+        else
+            _fakeGroundedPlayer = false;
         
         if((_fakeGroundedPlayer && Input.GetButtonDown("Jump")) || (_fakeGroundedPlayer && MobileJump)) {
             if(hitClimbInfo.collider != null) //Bu if ifadesi tırmanma animasyonu daha fazla görünsün diye tasarlanmıştır.
-                hitInfoBool = true; //Jump Animation
+                hitClimbInfoBool = true; //Jump Animation
             else
-                jumpAnimation = true;
+            {
+                jumpingAnimation = true;
+                landingAnimation = false;
+                
+                _playerAnimations.Jump(jumpingAnimation);
+                fallingAnimation = true;
+            }
 
-            if(_realGroundedPlayer)
+            if (_realGroundedPlayer)
+            {
                 playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);//Zıplamadaki hareket hızı yani gerçek yerden zıplama ise girer.
+            }
             else
                 playerVelocity.y += Mathf.Sqrt(jumpHeight/2 * -3.0f * gravityValue);//Tırmanırkenki hareket hızı yani gerçek yerden zıplama değilse girer.
 
@@ -162,22 +180,26 @@ public class PlayerController : MonoBehaviour
             if(!_doubleJump) 
                 StartCoroutine(ResetJumpRoutine());
         }
-        else if(hitInfo.collider != null && hitInfo.collider.CompareTag("floor")) {
+        else if(hitJumpInfo.collider != null && !hitClimbInfoBool) {
             if(resetJump == false || _doubleJump) {
                 _fakeGroundedPlayer = _realGroundedPlayer = true;
-                jumpAnimation = false; //Jump Animation
+                jumpingAnimation = false; //Jump Animation
+                fallingAnimation = false; //falling Animation
+                
+                _playerAnimations.Land(landingAnimation);
             }
-            
         }
-        //Jump Animation
-        _playerAnimations.Jump(jumpAnimation);
-        //Jump END
+        if (!_fakeGroundedPlayer && !hitClimbInfoBool)
+        {
+            landingAnimation = true;
+            jumpingAnimation = false;
+            
+            _playerAnimations.Fall(true);    
+        }
         
         groundedPlayer = controller.isGrounded;
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
-        
-        _playerAnimations.Fall(controller.isGrounded);
     }
 
     IEnumerator ResetJumpRoutine() {
@@ -186,21 +208,18 @@ public class PlayerController : MonoBehaviour
     }
     
     void Climb() {
-        Physics.Raycast(new Vector3(transform.position.x, transform.position.y-0.35f, transform.position.z), transform.forward, out hitClimbInfo, 0.5F);
-        Physics.Raycast(new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z), transform.forward, out hitClimbInfoExit, 0.5f);
-        
         //Climbing Animation
         if(hitClimbInfo.collider != null && hitClimbInfo.collider.tag == "floor")
-            hitInfoBool = true;
+            hitClimbInfoBool = true;
         else
-            hitInfoBool = false;
+            hitClimbInfoBool = false;
         if(hitClimbInfoExit.collider != null && hitClimbInfoExit.collider.tag == "floor")
-            hitInfoExitBool = true;
+            hitClimbInfoExitBool = true;
         else
-            hitInfoExitBool = false;
+            hitClimbInfoExitBool = false;
 
-        _playerAnimations.ClimbingExit(hitInfoExitBool, hitInfoBool);
-        _playerAnimations.Climbing(hitInfoExitBool, hitInfoBool);
+        _playerAnimations.ClimbingExit(hitClimbInfoExitBool, hitClimbInfoBool);
+        _playerAnimations.Climbing(hitClimbInfoExitBool, hitClimbInfoBool);
         //
 
         if(hitClimbInfo.collider == null) {//climbingSystemCore ifadesi ile aynı duvardan tırmanmak yerine karşı duvara zıplamayı sağladım.
@@ -211,7 +230,7 @@ public class PlayerController : MonoBehaviour
             _fakeGroundedPlayer = true;//Tırmanırken space tuşuna bastığımızda if işleminden geçsin diye.
             climbingSystemCore = false;
         }
-        else if(!hitInfoExitBool && hitInfoBool && gameObject.GetComponent<Features_Script>().health > 0) {
+        else if(!hitClimbInfoExitBool && hitClimbInfoBool && gameObject.GetComponent<Features_Script>().health > 0) {
             controller.enabled = false;
             transform.position += (animationGameObject.transform.forward*.88f + animationGameObject.transform.up) * .66f;
             //transform.position = new Vector3(transform.position.x + 0.6f, transform.position.y+.75f, transform.position.z); //Önceki çözüm //Old solution
@@ -269,7 +288,7 @@ public class PlayerController : MonoBehaviour
                 if (enemyScript != null)
                 {
                     hitEnemy.collider.GetComponentInParent<Features_Script>().health -= characterDamage + damageFightArray[randomAnimation];
-                    fightEnter = false;   
+                    //fightEnter = false;   
                 }
             }
         }

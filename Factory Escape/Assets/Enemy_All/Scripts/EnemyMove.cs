@@ -8,7 +8,7 @@ public class EnemyMove : MonoBehaviour
     private Animator animator;
     private Vector3 previous;
     private Vector3 playerVector3;
-    private bool düşmanÖnündeDüşmanBool = false;
+    //private bool düşmanÖnündeDüşmanBool = false;
 
     private static readonly int StandToRun = Animator.StringToHash("StandToRun");
     private static readonly int FightBool = Animator.StringToHash("FightBool");

@@ -10,7 +10,8 @@ public class PlayerAnimations : MonoBehaviour
     private static readonly int ReclessBool = Animator.StringToHash("ReclessBool");
     private static readonly int UpRaycast = Animator.StringToHash("UpRaycast");
     private static readonly int DownRaycast = Animator.StringToHash("DownRaycast");
-    private static readonly int OnTheGround = Animator.StringToHash("OnTheGround");
+    private static readonly int OnTheLanding = Animator.StringToHash("OnTheLanding");
+    private static readonly int OnTheFalling = Animator.StringToHash("OnTheFalling");
 
     void Start()
     {
@@ -22,14 +23,22 @@ public class PlayerAnimations : MonoBehaviour
     }
 
     public void Jump(bool jump) {
-        _animator.SetBool(RunToJump, jump);
+        if (jump)
+            _animator.SetTrigger(RunToJump);
     }
 
     public void Fall(bool fall)
     {
-        _animator.SetBool(OnTheGround, fall);
+        if (fall)
+            _animator.SetTrigger(OnTheFalling);   
     }
 
+    public void Land(bool land)
+    {
+        if (land) 
+            _animator.SetTrigger(OnTheLanding); 
+    }
+    
     public void Recless(bool recless) {
         _animator.SetBool(ReclessBool, recless);
     }
