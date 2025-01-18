@@ -18,29 +18,33 @@ public class PlayerAnimations : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
     }
 
-    public void Move(float move) {
+    public void Move(float move) 
+    {
        _animator.SetFloat(StandToRun, Mathf.Abs(move)); 
     }
 
-    public void Jump(bool jump) {
-        if (jump)
-            _animator.SetTrigger(RunToJump);
+    public void Jump() 
+    { 
+        _animator.SetTrigger(RunToJump);
+        _animator.ResetTrigger(OnTheFalling);
+        _animator.ResetTrigger(OnTheLanding);
     }
 
-    public void Fall(bool fall)
-    {
-        if (fall)
-            _animator.SetTrigger(OnTheFalling);   
+    public void Fall()
+    { 
+        _animator.SetTrigger(OnTheFalling);   
+        _animator.ResetTrigger(OnTheLanding);
     }
 
-    public void Land(bool land)
+    public void Land()
     {
-        if (land) 
-            _animator.SetTrigger(OnTheLanding); 
+        _animator.ResetTrigger(OnTheFalling);
+        _animator.SetTrigger(OnTheLanding); 
     }
     
-    public void Recless(bool recless) {
-        _animator.SetBool(ReclessBool, recless);
+    public void Reckless(bool reckless) 
+    {
+        _animator.SetBool(ReclessBool, reckless);
     }
 
     public void Climbing(/*bool climbing*/ bool upRaycast, bool downRaycast) {

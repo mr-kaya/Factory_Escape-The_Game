@@ -32,12 +32,12 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector]
     public GameObject animationGameObject;
-    private PlayerAnimations _playerAnimations;
-    private bool jumpingAnimation = false;
-    private bool landingAnimation = false;
-    private bool fallingAnimation = false;
-    private bool reclessAnimation = false;
-    private float reclessAnimationTimer = 0.0f;
+    private PlayerAnimations playerAnimations;
+    //private bool jumpingAnimation = false;
+    //private bool landingAnimation = false;
+    //private bool fallingAnimation = false;
+    private bool recklessAnimation = false;
+    private float recklessAnimationTimer = 0.0f;
     
     private bool hitClimbInfoBool = false;
     private bool hitClimbInfoExitBool = false;
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
     void Start() 
     {
         animator = gameObject.GetComponentInChildren<Animator>();
-        _playerAnimations = animationGameObject.GetComponent<PlayerAnimations>();
+        playerAnimations = animationGameObject.GetComponent<PlayerAnimations>();
         controller = gameObject.GetComponent<CharacterController>();
         
         //Player Default Collider
@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Raycast System
-        Physics.Raycast(transform.position, Vector3.down, out hitJumpInfo, 2F);
+        Physics.Raycast(transform.position, Vector3.down, out hitJumpInfo, 1.8F);
         Physics.Raycast(new Vector3(transform.position.x, transform.position.y-0.35f, transform.position.z), transform.forward, out hitClimbInfo, 0.5F);
         Physics.Raycast(new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z), transform.forward, out hitClimbInfoExit, 0.5f);
         
@@ -126,22 +126,22 @@ public class PlayerController : MonoBehaviour
         //Climbing Move End
 
         //Move Animation
-        _playerAnimations.Move(move.x);
+        playerAnimations.Move(move.x);
         //Recless Animation
         if(move.x == 0) {
-            reclessAnimationTimer += Time.deltaTime;
-            if(reclessAnimationTimer >= 10.0f) {
-                reclessAnimation = true;
+            recklessAnimationTimer += Time.deltaTime;
+            if(recklessAnimationTimer >= 10.0f) {
+                recklessAnimation = true;
             }
         }
         else {
-            reclessAnimationTimer = 0.0f;
-            reclessAnimation = false;
+            recklessAnimationTimer = 0.0f;
+            recklessAnimation = false;
         }
-        _playerAnimations.Recless(reclessAnimation);
+        playerAnimations.Reckless(recklessAnimation);
     }
 
-    public void Jump(bool MobileJump) {
+    public void Jump(bool mobileJump) {
         if(groundedPlayer && playerVelocity.y < 0) {
             playerVelocity.y = 0f;
         }
@@ -152,16 +152,12 @@ public class PlayerController : MonoBehaviour
         else
             _fakeGroundedPlayer = false;
         
-        if((_fakeGroundedPlayer && Input.GetButtonDown("Jump")) || (_fakeGroundedPlayer && MobileJump)) {
+        if((_fakeGroundedPlayer && Input.GetButtonDown("Jump")) || (_fakeGroundedPlayer && mobileJump)) {
             if(hitClimbInfo.collider != null) //Bu if ifadesi tırmanma animasyonu daha fazla görünsün diye tasarlanmıştır.
                 hitClimbInfoBool = true; //Jump Animation
             else
             {
-                jumpingAnimation = true;
-                landingAnimation = false;
-                
-                _playerAnimations.Jump(jumpingAnimation);
-                fallingAnimation = true;
+                playerAnimations.Jump();
             }
 
             if (_realGroundedPlayer)
@@ -175,27 +171,23 @@ public class PlayerController : MonoBehaviour
             resetJump = true;
             
             //Mobile Jump Button
-            MobileJump = false;
+            mobileJump = false;
 
             if(!_doubleJump) 
                 StartCoroutine(ResetJumpRoutine());
         }
-        else if(hitJumpInfo.collider != null && !hitClimbInfoBool) {
-            if(resetJump == false || _doubleJump) {
+        else if (!_fakeGroundedPlayer && !hitClimbInfoBool)
+        {
+            playerAnimations.Fall();
+        }
+        else if(_fakeGroundedPlayer && !hitClimbInfoBool) {
+            if(!resetJump || _doubleJump) {
                 _fakeGroundedPlayer = _realGroundedPlayer = true;
-                jumpingAnimation = false; //Jump Animation
-                fallingAnimation = false; //falling Animation
-                
-                _playerAnimations.Land(landingAnimation);
+                playerAnimations.Land();
             }
         }
-        if (!_fakeGroundedPlayer && !hitClimbInfoBool)
-        {
-            landingAnimation = true;
-            jumpingAnimation = false;
-            
-            _playerAnimations.Fall(true);    
-        }
+
+        _realGroundedPlayer = controller.isGrounded;
         
         groundedPlayer = controller.isGrounded;
         playerVelocity.y += gravityValue * Time.deltaTime;
@@ -218,8 +210,8 @@ public class PlayerController : MonoBehaviour
         else
             hitClimbInfoExitBool = false;
 
-        _playerAnimations.ClimbingExit(hitClimbInfoExitBool, hitClimbInfoBool);
-        _playerAnimations.Climbing(hitClimbInfoExitBool, hitClimbInfoBool);
+        playerAnimations.ClimbingExit(hitClimbInfoExitBool, hitClimbInfoBool);
+        playerAnimations.Climbing(hitClimbInfoExitBool, hitClimbInfoBool);
         //
 
         if(hitClimbInfo.collider == null) {//climbingSystemCore ifadesi ile aynı duvardan tırmanmak yerine karşı duvara zıplamayı sağladım.
@@ -240,8 +232,8 @@ public class PlayerController : MonoBehaviour
 
     public void Fight() {
         ///*Player - Enemy hareket ve Fight
-        reclessAnimationTimer = 0.0F;
-        reclessAnimation = false;
+        recklessAnimationTimer = 0.0F;
+        recklessAnimation = false;
         animator.SetTrigger("Attack");
 
         /*if(!fightEnter && move.x == 0) {
