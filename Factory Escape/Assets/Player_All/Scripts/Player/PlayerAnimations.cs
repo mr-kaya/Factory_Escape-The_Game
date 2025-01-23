@@ -23,11 +23,9 @@ public class PlayerAnimations : MonoBehaviour
        _animator.SetFloat(StandToRun, Mathf.Abs(move)); 
     }
 
-    public void Jump() 
+    public void Jump(bool jumpBool) 
     { 
-        _animator.SetTrigger(RunToJump);
-        _animator.ResetTrigger(OnTheFalling);
-        _animator.ResetTrigger(OnTheLanding);
+        _animator.SetBool(RunToJump, jumpBool);
     }
 
     public void Fall()
