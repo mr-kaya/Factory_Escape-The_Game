@@ -58,14 +58,6 @@ public class PlayerAnimations : MonoBehaviour
     }
 
     public void PlayerFightIdle(bool triggerEnemy) {
-        if (triggerEnemy)
-        {
-            _animator.SetTrigger(FightLayer);
-        }
-        else
-        {
-            _animator.SetTrigger(BaseLayer);
-        }
         _animator.SetBool("FightBool", triggerEnemy);
     }
 }

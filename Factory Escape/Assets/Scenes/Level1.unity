@@ -941,6 +941,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 378138906}
     - target: {fileID: 8880935125569823579, guid: 06f704cc7a2bd784b92dbd545aaee9de, type: 3}
+      propertyPath: doubleJumpBool
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8880935125569823579, guid: 06f704cc7a2bd784b92dbd545aaee9de, type: 3}
       propertyPath: joystickGameObject
       value: 
       objectReference: {fileID: 499648862}

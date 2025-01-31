@@ -78,10 +78,10 @@ namespace Player_All.Scripts.Player
         void Update()
         {
             //Raycast System
-            Physics.Raycast(transform.position, Vector3.down, out hitJumpInfo, doubleJumpDistance);
-            Physics.Raycast(new Vector3(transform.position.x, transform.position.y-0.35f, transform.position.z), transform.forward, out hitClimbInfo, 0.5F);
-            Physics.Raycast(new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z), transform.forward, out hitClimbInfoExit, 0.5f);
-        
+            Physics.Raycast(transform.position, Vector3.down, out hitJumpInfo, doubleJumpDistance, ~(1 << LayerMask.NameToLayer("Ignore Raycast")));
+            Physics.Raycast(new Vector3(transform.position.x, transform.position.y-0.35f, transform.position.z), transform.forward, out hitClimbInfo, 0.5F, ~(1 << LayerMask.NameToLayer("Ignore Raycast")));
+            Physics.Raycast(new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z), transform.forward, out hitClimbInfoExit, 0.5f, ~(1 << LayerMask.NameToLayer("Ignore Raycast")));
+            
             if(Mathf.Abs(gameObject.transform.position.z) > 0.33F) {
                 controller.enabled = false;
                 transform.position = new Vector3(transform.position.x, transform.position.y, 0);
@@ -177,12 +177,16 @@ namespace Player_All.Scripts.Player
             }
         
             //Fly and Jump Fall ***
-            if (hitJumpInfo.collider == null)
+            if (hitJumpInfo.collider == null && hitClimbInfo.collider == null)
             {
+                if (!doubleJumpBool)
+                {
+                    fakeGroundedPlayer = false;
+                }
                 playerAnimations.Fall();
                 playerAnimations.Jump(false);
             }
-        
+
             groundedPlayer = controller.isGrounded;
             playerVelocity.y += gravityValue * Time.deltaTime;
             controller.Move(playerVelocity * Time.deltaTime);
